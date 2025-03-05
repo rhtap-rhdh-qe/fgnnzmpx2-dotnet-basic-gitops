@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: fgnnzmpx2-dotnet-basic
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-rhtap-quay.apps.a73a01b1-388a-4414-bf81-6c0fff18df04.prod.konfluxeaas.com/rhtap/rhtap-qe-dotnet-basic:1d7e3a119b6b196ac68da40cc80116bce67915fa@sha256:bd635933f093d7331c917f7a14acb4a3901eabb8416f2c70f6c64a75c08e2fb1
+          name: container-image
